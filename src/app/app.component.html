@@ -1,3 +1,12 @@
-<h1>
-  {{title}}
-</h1>
+<h1>{{title}}</h1>
+    <h2>My favorite hero is: {{myHero.name}}</h2>
+    <a (click)="clickMe()">Click</a>
+    {{message}}
+    <input (keyup)="onKey($event)">
+    <p>{{values}}</p>
+    <p>Heroes:</p>
+    <ul>
+      <li *ngFor="let hero of heroes">
+        {{ hero.name }}
+      </li>
+    </ul>

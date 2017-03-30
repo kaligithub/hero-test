@@ -5,22 +5,21 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HeroFormComponent } from './hero-form.component';
-import {HeroesComponent} from './heroes.component';
-
+import { HeroDetailComponent } from './hero-detail.component';
+import { HeroService } from './hero.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroFormComponent
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

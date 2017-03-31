@@ -12,13 +12,14 @@ import { HeroService } from './hero.service';
 export class AppComponent implements OnInit {
   title = 'app works!';
   heroes: Hero[];
-
   selectedHero: Hero;
 
   constructor(private heroService: HeroService) { }
 
   ngOnInit(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes().then(heroes=>
+      this.heroes = heroes
+    );
   }
 
   onSelect(hero: Hero): void{

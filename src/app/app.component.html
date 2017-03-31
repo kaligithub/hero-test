@@ -4,7 +4,11 @@
   <li *ngFor="let hero of heroes"
     [class.selected]="hero === selectedHero"
     (click)="onSelect(hero)">
+<<<<<<< HEAD
     <span class="badge">{{hero.id}}</span>{{hero.name}}
+=======
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+>>>>>>> 21c4d7cb5cc1b54c2d8a82886dc1a0d45c8d159e
   </li>
 </ul>
 <hero-detail [hero]="selectedHero"></hero-detail>
